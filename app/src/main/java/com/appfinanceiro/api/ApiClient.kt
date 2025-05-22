@@ -45,7 +45,7 @@ class ApiClient(private val sessionManager: SessionManager) {
         .connectTimeout(30, TimeUnit.SECONDS)
         .readTimeout(30, TimeUnit.SECONDS)
         .build()
-    
+
     private val retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(client)

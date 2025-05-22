@@ -66,14 +66,15 @@ dependencies {
     // Room para cache local (se necessário)
     implementation("androidx.room:room-runtime:2.5.0")
     implementation("androidx.room:room-ktx:2.5.0")
-    //kapt("androidx.room:room-compiler:2.5.0")
+    kapt("androidx.room:room-compiler:2.5.0")
 
     // Gráficos (se necessário)
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
     // Carregamento de imagens (se necessário)
     implementation("com.github.bumptech.glide:glide:4.14.2")
-    //kapt("com.github.bumptech.glide:compiler:4.14.2")
+    kapt("com.github.bumptech.glide:compiler:4.14.2")
+
 
     // Testes
     testImplementation(libs.junit)
