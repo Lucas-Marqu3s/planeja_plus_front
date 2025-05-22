@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">AppFinanceiro</string>
+    <string name="login_title">Planeja+</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="login">Entrar</string>
+    <string name="register_prompt">Cadastre-se</string>
+    <string name="register_title">Cadastrar</string>
+    <string name="name">Nome</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Registrar</string>
+    <string name="login_prompt">Login</string>
+    <string name="balance">Saldo</string>
+    <string name="income">Ganho</string>
+    <string name="expense">Gasto</string>
+    <string name="recent_transactions">Transações Recentes</string>
+    <string name="add_transaction">Adicionar Transação</string>
+    <string name="add_goal">Adicionar Meta</string>
+    <string name="profile_info">Usuário</string>
+    <string name="update_profile">Atualizar</string>
+    <string name="change_password">Trocar Senha</string>
+    <string name="current_password">Senha Antiga</string>
+    <string name="new_password">Nova Senha</string>
+    <string name="confirm_new_password">Confirmar Nova Senha</string>
+    <string name="update_password">Confirmar</string>
+    <string name="logout">Sair</string>
+    <string name="dashboard">Dash</string>
+    <string name="transactions">Transação</string>
+    <string name="goals">Meta</string>
+    <string name="profile">Perfil</string>
+</resources>
