@@ -9,6 +9,12 @@
     android:gravity="center"
     tools:context=".ui.auth.RegisterActivity">
 
+    <ImageView
+        android:layout_width="141dp"
+        android:layout_height="122dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/logo_planeja_plus" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        style="@style/CustomTextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etName"
@@ -36,7 +42,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        style="@style/CustomTextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
@@ -51,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         app:passwordToggleEnabled="true"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        style="@style/CustomTextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPassword"
@@ -66,7 +72,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         app:passwordToggleEnabled="true"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        style="@style/CustomTextInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etConfirmPassword"
@@ -81,6 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/register"
+        android:backgroundTint="#2D76A1"
         android:padding="12dp"
         android:layout_marginBottom="16dp"/>
 
@@ -89,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/login_prompt"
-        android:textColor="@color/design_default_color_primary"
+        android:textColor="#2D76A1"
         android:padding="8dp"/>
 
     <ProgressBar

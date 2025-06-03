@@ -112,6 +112,10 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
         android:contentDescription="@string/add_transaction"
+        app:tint="@android:color/white"
+        android:backgroundTint="#2D76A1"
         android:src="@android:drawable/ic_input_add" />
+
+
 
 </LinearLayout>

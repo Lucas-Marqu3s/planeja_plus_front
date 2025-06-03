@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">AppFinanceiro</string>
+    <string name="app_name">Planeja+</string>
     <string name="login_title">Planeja+</string>
     <string name="email">E-mail</string>
     <string name="password">Password</string>
     <string name="login">Entrar</string>
     <string name="register_prompt">Cadastre-se</string>
-    <string name="register_title">Cadastrar</string>
+    <string name="register_title">Crie sua conta</string>
     <string name="name">Nome</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="register">Registrar</string>
@@ -24,7 +24,7 @@
     <string name="confirm_new_password">Confirmar Nova Senha</string>
     <string name="update_password">Confirmar</string>
     <string name="logout">Sair</string>
-    <string name="dashboard">Dash</string>
+    <string name="dashboard">Home</string>
     <string name="transactions">Transação</string>
     <string name="goals">Meta</string>
     <string name="profile">Perfil</string>

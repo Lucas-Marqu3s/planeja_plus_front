@@ -22,6 +22,7 @@
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
         android:contentDescription="@string/add_goal"
+        app:backgroundTint="@color/colorPrimary"
         android:src="@android:drawable/ic_input_add" />
 
 </LinearLayout>

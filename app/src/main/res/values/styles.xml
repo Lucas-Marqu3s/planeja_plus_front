@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">#2D76A1</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.Fab" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

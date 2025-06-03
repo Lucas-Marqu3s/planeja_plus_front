@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Cores principais -->
+    <color name="colorPrimary">#2D76A1</color>
+    <color name="colorPrimaryVariant">#245B7F</color> <!-- uma variação mais escura -->
+    <color name="colorOnPrimary">#FFFFFF</color> <!-- cor do texto em cima do primary -->
+
+    <color name="colorSecondary">#2D76A1</color> <!-- pode ser a mesma ou outra cor -->
+    <color name="colorSecondaryVariant">#1E4B66</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
 </resources>
