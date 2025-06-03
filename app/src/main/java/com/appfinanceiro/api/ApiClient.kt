@@ -8,6 +8,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
+import com.google.gson.GsonBuilder
+
 
 class ApiClient(private val sessionManager: SessionManager) {
     
@@ -46,10 +48,14 @@ class ApiClient(private val sessionManager: SessionManager) {
         .readTimeout(30, TimeUnit.SECONDS)
         .build()
 
+    val gson = GsonBuilder()
+        .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+        .create()
+
     private val retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .client(client)
-        .addConverterFactory(GsonConverterFactory.create())
+        .addConverterFactory(GsonConverterFactory.create(gson)) // <-- use gson com formato customizado
         .build()
     
     val apiService: ApiService = retrofit.create(ApiService::class.java)

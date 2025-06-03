@@ -28,4 +28,5 @@
         android:name="com.appfinanceiro.ui.profile.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_profile" />
+
 </navigation>

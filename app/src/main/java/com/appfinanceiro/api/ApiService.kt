@@ -1,6 +1,7 @@
 package com.appfinanceiro.api
 
 import com.appfinanceiro.model.*
+import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -11,7 +12,7 @@ interface ApiService {
     suspend fun login(@Body loginRequest: LoginRequest): Response<AuthResponse>
     
     @POST("api/auth/register")
-    suspend fun register(@Body registerRequest: RegisterRequest): Response<String>
+    suspend fun register(@Body request: RegisterRequest): Response<ResponseBody>
     
     // Usuários
     @GET("api/users/me")

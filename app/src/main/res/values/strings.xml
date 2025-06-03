@@ -28,4 +28,10 @@
     <string name="transactions">Transação</string>
     <string name="goals">Meta</string>
     <string name="profile">Perfil</string>
+    <string name="title_new_transaction">Adicionar Transação</string>
+    <string name="description">Descrição</string>
+    <string name="value">Valor</string>
+    <string name="category">Categoria</string>
+    <string name="date">Data</string>
+    <string name="save_transaction">Adicionar</string>
 </resources>
