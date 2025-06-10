@@ -34,4 +34,15 @@
     <string name="category">Categoria</string>
     <string name="date">Data</string>
     <string name="save_transaction">Adicionar</string>
+    <string name="title_new_goal">Meta</string>
+    <string name="goal_name">Título</string>
+    <string name="target_amount">Valor da meta</string>
+    <string name="current_amount">Valor atual</string>
+    <string name="deadline">Tempo estimado</string>
+    <string name="description_optional">Descrição</string>
+    <string name="status">Status</string>
+    <string name="save_goal">Salvar</string>
+    <string name="status_in_progress">Em andamento</string>
+    <string name="status_completed">Finalizado</string>
+    <string name="status_canceled">Cancelado</string>
 </resources>

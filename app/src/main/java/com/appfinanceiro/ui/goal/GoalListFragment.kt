@@ -1,5 +1,6 @@
 package com.appfinanceiro.ui.goal
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.appfinanceiro.api.ApiClient
 import com.appfinanceiro.databinding.FragmentGoalListBinding
+import com.appfinanceiro.ui.transaction.TransactionFormActivity
 import com.appfinanceiro.util.SessionManager
 import kotlinx.coroutines.launch
 
@@ -40,8 +42,8 @@ class GoalListFragment : Fragment() {
         loadGoals()
         
         binding.fabAddGoal.setOnClickListener {
-            // Navegar para tela de adicionar meta
-            // Implementar navegação para GoalFormFragment
+            val intent = Intent(requireContext(), GoalFormActivity::class.java)
+            startActivity(intent)
         }
     }
     

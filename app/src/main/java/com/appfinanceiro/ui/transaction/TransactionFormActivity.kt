@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.appfinanceiro.MainActivity
-import com.appfinanceiro.R // Make sure R is imported correctly
 import com.appfinanceiro.api.ApiClient
 import com.appfinanceiro.api.ApiService
 import com.appfinanceiro.databinding.ActivityTransactionFormBinding

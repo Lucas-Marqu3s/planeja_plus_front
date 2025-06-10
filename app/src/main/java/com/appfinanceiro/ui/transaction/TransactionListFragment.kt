@@ -1,5 +1,6 @@
 package com.appfinanceiro.ui.transaction
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -39,10 +40,10 @@ class TransactionListFragment : Fragment() {
         
         setupRecyclerView()
         loadTransactions()
-        
+
         binding.fabAddTransaction.setOnClickListener {
-            // Navegar para tela de adicionar transação
-            // Implementar navegação para TransactionFormFragment
+            val intent = Intent(requireContext(), TransactionFormActivity::class.java)
+            startActivity(intent)
         }
     }
     

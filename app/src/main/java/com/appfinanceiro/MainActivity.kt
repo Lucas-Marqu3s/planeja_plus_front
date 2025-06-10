@@ -20,15 +20,17 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
 
-        // Configurar Toolbar como ActionBar
         setSupportActionBar(binding.toolbar)
 
-        // Conectar Toolbar ao Navigation Component
         val appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
-
-        // Conectar BottomNavigationView ao NavController
         binding.navView.setupWithNavController(navController)
+
+        // Navegar para o fragmento desejado se for passado via intent
+        val destination = intent.getStringExtra("navigateTo")
+        if (destination == "goalList") {
+            navController.navigate(R.id.navigation_goals)
+        }
     }
 
     // Isso permite que o botão de "voltar" funcione corretamente com a Toolbar
