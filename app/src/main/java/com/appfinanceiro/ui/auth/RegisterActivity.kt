@@ -44,7 +44,8 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         binding.tvLogin.setOnClickListener {
-            finish() // Volta para a tela de login
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -45,4 +45,7 @@
     <string name="status_in_progress">Em andamento</string>
     <string name="status_completed">Finalizado</string>
     <string name="status_canceled">Cancelado</string>
+    <string name="titleDescriptionLanding">Alcance sua meta financeira</string>
+    <string name="DescriptionLanding">Oferecemos os melhores recursos financeiros e o sistema mais seguro para ajudar você a aumentar seu patrimônio</string>
+    <string name="continue_to_dashboard">Eu já tenho uma conta!</string>
 </resources>
