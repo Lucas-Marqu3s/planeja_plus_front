@@ -13,7 +13,7 @@ import com.google.gson.GsonBuilder
 
 class ApiClient(private val sessionManager: SessionManager) {
     
-    private val BASE_URL = "http://10.0.2.2:8080/" // Endereço para acessar localhost do computador a partir do emulador
+    private val BASE_URL = "http://3.88.162.0:8080/" // Endereço para acessar localhost do computador a partir do emulador
     
     private val authInterceptor = object : Interceptor {
         override fun intercept(chain: Interceptor.Chain): Response {

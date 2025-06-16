@@ -93,7 +93,9 @@ class RegisterActivity : AppCompatActivity() {
 
                 if (response.isSuccessful) {
                     showSuccess("Cadastro realizado com sucesso! Faça login para continuar.")
-                    finish() // Volta para a tela de login
+                    // Navega para a LoginActivity
+                    val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+                    startActivity(intent)
                 } else {
                     showError("Falha ao cadastrar: ${response.errorBody()?.string()}")
                 }
