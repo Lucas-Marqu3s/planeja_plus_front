@@ -12,7 +12,8 @@ import java.util.Locale
 
 class GoalAdapter(
     private var goals: List<Goal>,
-    private val onItemClick: (Goal) -> Unit
+    private val onItemClick: (Goal) -> Unit,
+    private val onTipsClick: (Goal) -> Unit
 ) : RecyclerView.Adapter<GoalAdapter.GoalViewHolder>() {
 
     private val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale("pt", "BR"))
@@ -48,16 +49,23 @@ class GoalAdapter(
                     onItemClick(goals[position])
                 }
             }
+
+            binding.btnShowTips.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    onTipsClick(goals[position])
+                }
+            }
         }
 
         fun bind(goal: Goal) {
             binding.tvGoalName.text = goal.name
-            
+
             // Formatar valores monetários
             val currentAmount = currencyFormat.format(goal.currentAmount)
             val targetAmount = currencyFormat.format(goal.targetAmount)
             binding.tvGoalProgress.text = "$currentAmount / $targetAmount"
-            
+
             // Calcular e definir progresso
             val progressPercentage = if (goal.targetAmount.toDouble() > 0) {
                 (goal.currentAmount.toDouble() / goal.targetAmount.toDouble() * 100).toInt()
@@ -65,14 +73,14 @@ class GoalAdapter(
                 0
             }
             binding.progressBarGoal.progress = progressPercentage
-            
+
             // Formatar data limite, se existir
             binding.tvGoalDeadline.text = if (goal.deadline != null) {
                 "Prazo: ${dateFormat.format(goal.deadline)}"
             } else {
                 "Sem prazo definido"
             }
-            
+
             // Definir status
             binding.tvGoalStatus.text = when (goal.status) {
                 GoalStatus.IN_PROGRESS -> "Em andamento"
@@ -80,13 +88,19 @@ class GoalAdapter(
                 GoalStatus.CANCELED -> "Cancelada"
             }
 
-// E também
+            // Definir cor do status
             val textColor = when (goal.status) {
                 GoalStatus.IN_PROGRESS -> android.graphics.Color.parseColor("#2196F3") // Azul
                 GoalStatus.COMPLETED -> android.graphics.Color.parseColor("#4CAF50") // Verde
                 GoalStatus.CANCELED -> android.graphics.Color.parseColor("#F44336") // Vermelho
             }
             binding.tvGoalStatus.setTextColor(textColor)
+
+            // Configurar texto do botão baseado no status
+            binding.btnShowTips.text = when (goal.status) {
+                GoalStatus.COMPLETED -> "Ver Lojas"
+                else -> "Ver Dicas"
+            }
         }
     }
 }

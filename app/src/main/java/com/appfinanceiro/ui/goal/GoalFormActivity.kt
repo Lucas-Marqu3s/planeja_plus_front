@@ -15,6 +15,7 @@ import com.appfinanceiro.api.ApiService
 import com.appfinanceiro.databinding.ActivityGoalFormBinding
 import com.appfinanceiro.model.GoalRequest
 import com.appfinanceiro.model.GoalStatus // Assuming GoalStatus enum exists in model package
+import com.appfinanceiro.model.GoalType
 import com.appfinanceiro.util.SessionManager
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -44,9 +45,17 @@ class GoalFormActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true) // Mostra a seta
         supportActionBar?.title = "Adicionar Meta"
 
+        setupGoalTypeSpinner()
         setupStatusSpinner()
         setupDatePicker()
         setupSaveButton()
+    }
+
+    private fun setupGoalTypeSpinner() {
+        val goalTypes = GoalType.values().map { it.displayName }
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, goalTypes)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        binding.spinnerGoalType.adapter = adapter
     }
 
     private fun setupStatusSpinner() {
@@ -99,6 +108,7 @@ class GoalFormActivity : AppCompatActivity() {
             val currentAmountStr = binding.etCurrentAmount.text.toString().trim()
             val description = binding.etGoalDescription.text.toString().trim()
             val selectedStatusPosition = binding.spinnerGoalStatus.selectedItemPosition
+            val selectedGoalTypePosition = binding.spinnerGoalType.selectedItemPosition
 
             if (name.isEmpty() || targetAmountStr.isEmpty() || currentAmountStr.isEmpty()) {
                 Toast.makeText(this, "Nome, valor alvo e valor atual são obrigatórios", Toast.LENGTH_SHORT).show()
@@ -125,6 +135,7 @@ class GoalFormActivity : AppCompatActivity() {
             }
 
             val status = GoalStatus.values()[selectedStatusPosition]
+            val goalType = GoalType.values()[selectedGoalTypePosition]
 
             val goalRequest = GoalRequest(
                 name = name,
@@ -132,7 +143,8 @@ class GoalFormActivity : AppCompatActivity() {
                 currentAmount = currentAmount,
                 deadline = selectedDeadline, // Use the selected Date object or null
                 description = description.ifEmpty { null }, // Send null if description is empty
-                status = status
+                status = status,
+                type = goalType
             )
 
             saveGoal(goalRequest)
@@ -169,4 +181,3 @@ class GoalFormActivity : AppCompatActivity() {
         return true
     }
 }
-

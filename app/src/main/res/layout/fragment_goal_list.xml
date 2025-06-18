@@ -15,7 +15,6 @@
         android:padding="16dp"
         tools:listitem="@layout/item_goal" />
 
-    <!-- FAB ancorado no canto inferior direito -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddGoal"
         android:layout_width="wrap_content"

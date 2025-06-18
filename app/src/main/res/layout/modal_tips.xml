@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="24dp">
+
+    <!-- Título do Modal -->
+    <TextView
+        android:id="@+id/tvModalTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dicas para sua Meta"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Conteúdo das Dicas -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:maxHeight="400dp">
+
+        <LinearLayout
+            android:id="@+id/llTipsContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💡 Dica 1: Defina um valor mensal para economizar"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:padding="8dp"
+                android:background="#F5F5F5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💰 Dica 2: Considere investimentos para acelerar o crescimento"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:padding="8dp"
+                android:background="#F5F5F5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📊 Dica 3: Acompanhe seu progresso regularmente"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:padding="8dp"
+                android:background="#F5F5F5" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎯 Dica 4: Mantenha o foco no seu objetivo"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"
+                android:padding="8dp"
+                android:background="#F5F5F5" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Botão Fechar -->
+    <Button
+        android:id="@+id/btnCloseModal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Fechar"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorPrimary"
+        style="@style/Widget.MaterialComponents.Button" />
+
+</LinearLayout>
+
